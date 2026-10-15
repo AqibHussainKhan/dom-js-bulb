@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript Bulb</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1 class="flex justify-center pt-[20px] px-4 text-[32px] sm:text-[50px] font-bold uppercase text-[#9a0002] text-center">DOM JAVASCRIPT</h1>
+
+    <main class="flex flex-col justify-center items-center min-h-[90vh] px-4 py-8">
+        <section id="bground" aria-labelledby="head" class="flex flex-col items-center border-[1px] rounded-[40px] bg-[#efe6dd] border-transparent w-full max-w-[850px] min-h-[650px] overflow-hidden">
+            <h2 id="head" class="w-full min-h-[150px] text-[45px] text-[#efe6dd] font-[900] flex justify-center items-center bg-[#9a0002]">BULB</h2>
+
+            <div class="p-[20px]">
+                <img id="bulboff" src="./pic_bulboff.gif" alt="Bulb is off" class="w-[160px] sm:w-[200px] max-w-full h-auto">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full px-[20px] pb-[24px] mt-auto">
+                <button id="bulb-on" aria-controls="bulboff" aria-pressed="false" class="border-[1px] border-white w-full min-h-[70px] text-[25px] font-bold bg-[#9a0002] active:bg-[#efe6dd] active:text-[#9a0002] active:border-[#9a0002] text-[#efe6dd] rounded-[30px] mt-[10px] cursor-pointer" type="button" onclick="
+                    document.getElementById('bulboff').src = './pic_bulbon.gif';
+                    document.getElementById('bulboff').alt = 'Bulb is on';
+                    document.getElementById('bulb-on').setAttribute('aria-pressed', 'true');
+                    document.getElementById('bulb-off').setAttribute('aria-pressed', 'false');
+                ">Bulb On</button>
+
+                <button id="bulb-off" aria-controls="bulboff" aria-pressed="true" class="border-[1px] border-white w-full min-h-[70px] text-[25px] font-bold bg-[#9a0002] active:bg-[#efe6dd] active:text-[#9a0002] active:border-[#9a0002] text-[#efe6dd] rounded-[30px] mt-[10px] cursor-pointer" type="button" onclick="
+                    document.getElementById('bulboff').src = './pic_bulboff.gif';
+                    document.getElementById('bulboff').alt = 'Bulb is off';
+                    document.getElementById('bulb-on').setAttribute('aria-pressed', 'false');
+                    document.getElementById('bulb-off').setAttribute('aria-pressed', 'true');
+                ">Bulb Off</button>
+            </div>
+        </section>
+    </main>
+
+    <nav aria-label="Card navigation" class="flex justify-center mt-[20px] px-4 pb-[30px]">
+        <a href="./domtext.html" class="border-[0.5px] px-[20px] py-[10px] rounded-[30px] text-[25px] font-bold bg-[#9a0002] active:bg-[#efe6dd] active:text-[#9a0002] active:border-[#9a0002] text-[#efe6dd] hover:scale-[1.02] active:scale-95 duration-300 cursor-pointer text-center">Next Card Slide</a>
+    </nav>
+</body>
+</html>
